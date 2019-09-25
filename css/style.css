@@ -110,7 +110,7 @@ html, body {
 
 
 .form-img {
-    background-image: url("../img/2783702.png");
+    background-image: url("https://res.cloudinary.com/esambooks/image/upload/v1569438392/2783702_wpklfm.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -122,7 +122,7 @@ html, body {
 
 .welcome-name {
     height: 120px;
-    background-image: url("../img/2783702-1.png");
+    background-image: url("https://res.cloudinary.com/esambooks/image/upload/v1569438384/2783702-1_kbtdaq.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
