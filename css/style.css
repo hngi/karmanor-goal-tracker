@@ -163,7 +163,7 @@ html, body {
 }
 
 .form-img {
-    background-image: url("../img/2783702.png");
+    background-image: url(https://res.cloudinary.com/anikriz/image/upload/v1569460244/HNG%20%7CStartng%20Internship/2783702_edm0rs.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -175,7 +175,7 @@ html, body {
 
 .welcome-name {
     height: 120px;
-    background-image: url("../img/2783702-1.png");
+    background-image: url(https://res.cloudinary.com/anikriz/image/upload/v1569460266/HNG%20%7CStartng%20Internship/2783702-1_liyjpv.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
