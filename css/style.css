@@ -287,6 +287,10 @@ html, body {
     text-align: right;
 }
 
+#close-modal {
+    color: #000;
+}
+
 
 /*==== MEDIA QUERY =====*/
 
