@@ -165,7 +165,7 @@
                         <div class="panel-collapse collapse in task-panel" id="content-1">
                             <div class="container-fluid a-task panel-body">
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task1CustomCheck1">
                                             <label class="custom-control-label" for="task1CustomCheck1">
@@ -173,6 +173,14 @@
                                             </label>
                                         </div>
                                     </div>
+                                    
+                                    <!-- the fa-check-confirmed class are for those tasks that has been confirmed-->
+                                    
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -183,7 +191,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task1CustomCheck2">
                                             <label class="custom-control-label" for="task1CustomCheck2">
@@ -191,6 +199,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -201,7 +214,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task1CustomCheck3">
                                             <label class="custom-control-label" for="task1CustomCheck3">
@@ -209,6 +222,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -219,13 +237,18 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task1CustomCheck4">
                                             <label class="custom-control-label" for="task1CustomCheck4">
                                                 <strong>Complete Solar application app</strong>
                                             </label>
                                         </div>
+                                    </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
                                     </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
@@ -327,7 +350,7 @@
                         <div class="panel-collapse collapse task-panel" id="content-2">
                             <div class="container-fluid a-task panel-body">
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task2CustomCheck1">
                                             <label class="custom-control-label" for="task2CustomCheck1">
@@ -335,6 +358,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -345,7 +373,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task2CustomCheck2">
                                             <label class="custom-control-label" for="task2CustomCheck2">
@@ -353,6 +381,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -363,7 +396,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task2CustomCheck3">
                                             <label class="custom-control-label" for="task2CustomCheck3">
@@ -371,6 +404,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -381,13 +419,18 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task2CustomCheck4">
                                             <label class="custom-control-label" for="task2CustomCheck4">
                                                 <strong>Complete Solar application app</strong>
                                             </label>
                                         </div>
+                                    </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
                                     </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
@@ -489,7 +532,7 @@
                         <div class="panel-collapse collapse task-panel" id="content-3">
                             <div class="container-fluid a-task panel-body">
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task3CustomCheck1">
                                             <label class="custom-control-label" for="task3CustomCheck1">
@@ -497,6 +540,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -507,7 +555,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task3CustomCheck2">
                                             <label class="custom-control-label" for="task3CustomCheck2">
@@ -515,6 +563,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -525,7 +578,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task3CustomCheck3">
                                             <label class="custom-control-label" for="task3CustomCheck3">
@@ -533,6 +586,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -543,13 +601,18 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task3CustomCheck4">
                                             <label class="custom-control-label" for="task3CustomCheck4">
                                                 <strong>Complete Solar application app</strong>
                                             </label>
                                         </div>
+                                    </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
                                     </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
@@ -651,7 +714,7 @@
                         <div class="panel-collapse collapse task-panel" id="content-4">
                             <div class="container-fluid a-task panel-body">
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task4CustomCheck1">
                                             <label class="custom-control-label" for="task4CustomCheck1">
@@ -659,6 +722,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -669,7 +737,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task4CustomCheck2">
                                             <label class="custom-control-label" for="task4CustomCheck2">
@@ -677,6 +745,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -687,7 +760,7 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task4CustomCheck3">
                                             <label class="custom-control-label" for="task4CustomCheck3">
@@ -695,6 +768,11 @@
                                             </label>
                                         </div>
                                     </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
+                                    </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
@@ -705,13 +783,18 @@
                                     </div>
                                 </div>
                                 <div class="row task-row">
-                                    <div class="col-8 task-name">
+                                    <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="task4CustomCheck4">
                                             <label class="custom-control-label" for="task4CustomCheck4">
                                                 <strong>Complete Solar application app</strong>
                                             </label>
                                         </div>
+                                    </div>
+                                    <div class="col-2 confirm-task">
+                                        <a href="#">
+                                            <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
+                                        </a>
                                     </div>
                                     <div class="col-2 delete-task">
                                         <a href="#">

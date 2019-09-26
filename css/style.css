@@ -295,6 +295,18 @@ html, body {
     font-size: 15px;
 }
 
+.delete-goal strong:hover {
+    color: red;
+}
+
+.delete-task strong:hover {
+    color: red;
+}
+
+.confirm-task strong:hover {
+    color: green;
+}
+
 
 /*==== MEDIA QUERY =====*/
 
@@ -369,6 +381,14 @@ html, body {
       font-size: 20px !important;
     }
     
+    .confirm-task {
+      font-size: 0px !important;
+    }
+
+   .confirm-task i {
+      font-size: 20px !important;
+    }
+    
     .goal-end-date {
         font-size: 10px;
         margin-top: 1%;
@@ -383,6 +403,18 @@ html, body {
     
     .progress-circle {
         margin-top: 15%;
+    }
+
+    .fa-plus {
+        color: #0079F3;
+    }
+
+    .fa-trash {
+        color: #F50000;
+    }
+
+    .fa-check-confirmed {
+        color: green;
     }
 }
 
