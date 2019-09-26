@@ -77,6 +77,16 @@ html, body {
     margin-left: -5%;
 }
 
+.title-header a {
+    text-decoration: none;
+    color: #000;
+}
+
+.logout a:hover, .logout a:active {
+    text-decoration: none;
+    color: #0079F3;
+}
+
 .insideParent {
     margin-top: 10%;
 }
@@ -149,7 +159,7 @@ html, body {
 
 .opp-page a {
     text-decoration: none;
-    color: 0079F3;
+    color: #0079F3;
 }
 
 .form-img {
@@ -201,12 +211,22 @@ html, body {
     border-radius: 5px;
 }
 
-.goal-name {
-    text-align: left;
-}
-
 .goal-panel a {
     text-decoration: none;
+    color: #000;
+}
+
+.goal-panel a:hover, .goal-panel a:active {
+    color: #0079F3;
+}
+
+.goal-name a {
+    text-align: left;
+    color: #0079F3;
+}
+
+.modal .modal-content a {
+    color: #fff;
 }
 
 .task-name {
@@ -258,10 +278,24 @@ html, body {
 }
 
 
+    
+.goal-end-date {
+    text-align: right;
+}
+    
+.task-end-date {
+    text-align: right;
+}
+
+
 /*==== MEDIA QUERY =====*/
 
 
 @media (max-width:900px) {
+    
+    .left-title {
+        margin: 20px 0 0 30px;
+    }
 
     .logout {
         margin-top: 5%;
@@ -337,6 +371,10 @@ html, body {
         font-size: 10px;
         margin-top: 1%;
         margin-left: -5%;
+    }
+    
+    .progress-circle {
+        margin-top: 15%;
     }
 }
 
