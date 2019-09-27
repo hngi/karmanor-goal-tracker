@@ -90,7 +90,11 @@
      } 
 
      function signOut(){
-
+        session_start();
+        session_unset();
+        session_destroy();
+        header('Location:../unreg.php');
+        exit();
 
      }
      function createGoal($username, $title, $description, $deadline){
