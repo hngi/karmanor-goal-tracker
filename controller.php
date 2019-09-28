@@ -93,7 +93,7 @@
         session_start();
         session_unset();
         session_destroy();
-        header('Location:../unreg.php');
+        header('Location:index.php');
         exit();
 
      }
