@@ -1,12 +1,16 @@
+<?php
+  include 'controller.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- required meta tags -->
+        <!--  required meta tags  -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Team Karmanov Login</title>
+        <title>Goal Tracker</title>
         <!-- fontawesome! -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- bootstrap CSS !-->
@@ -31,14 +35,29 @@
                                         <br> To Your Account
                                     </h4>
 
-                                    <form action="#" Method="POST">
+                                    <form action="index.php" Method="POST">
                                         <div class="form-group mt-5">
 
+                                        	<?php
+                                              if(isset($_POST['submit'])){
 
+                                                    
+                                                     $email=$_POST['email'];
+                                                     $password=$_POST['password'];
+
+
+                                                    $goaltracker = new goaltracker;
+                                                    $status=$goaltracker->signin($email, $password);
+                                                    if($status==false){
+                                                    	echo '<font color="red">WRONG LOGIN DETAILS</font>';
+                                                      }                                        
+                                                    }
+      
+                                                ?>
                                             <input type="email" class="form-control input-field" id="email" name="email" placeholder="Enter Email Address" required>
                                         </div>
                                         <div class="form-group mt-4">
-                                            <input type="password" class="form-control input-field" id="pwd" name="pass"  placeholder="Enter Password" required>
+                                            <input type="password" class="form-control input-field" id="pwd" name="password"  placeholder="Enter Password" required>
                                         </div>
                                         <div class="container mt-4">
                                             <div class="row d-flex justify-content-between">
@@ -56,7 +75,7 @@
                                         <button type="submit" name="submit" class="mt-4 col-3 btn btn-primary btn-lg submit-button">Login</button>
                                     </form>
                                     <div class="opp-page mt-4">
-                                        <p>Don't have an account? <a href="register.php">Sign Up</a></p>
+                                        <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
 
                                     </div>
 

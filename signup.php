@@ -1,12 +1,17 @@
+<?php
+  include 'controller.php'; 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- required meta tags -->
+        <!--  required meta tags  -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title>Team Karmanov Register</title>
+        <title>The A-Team Login Page</title>
         <!-- fontawesome! -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- bootstrap CSS !-->
@@ -27,24 +32,37 @@
                         <div class="parent">
                             <div class="row insideParent d-flex justify-content-center">
                                 <div class="col-md-10 left-form">
-                                    <h4>Welcome Back, Please Login
-                                        <br> To Your Account
+                                    <h4>Welcome Back, Please Register
+                                        <br> Your Account
                                     </h4>
 
-                                    <form action="#" Method="POST">
+                                    <form action="signup.php" Method="POST">
                                         <div class="row mt-5">
                                             <div class="col">
-                                                <input type="text" class="form-control input-field" name="f-name" placeholder="First name" required>
+                                                <input type="text" class="form-control input-field" name="firstname" placeholder="First name" required>
                                             </div>
                                             <div class="col">
-                                                <input type="text" class="form-control input-field" name="l-name" placeholder="Last name" required>
+                                                <input type="text" class="form-control input-field" name="lastname" placeholder="Last name" required>
                                             </div>
                                         </div>
                                         <div class="form-group mt-4">
+                                            <?php
+                                              if(isset($_POST['submit'])){
+                                                    $firstname=$_POST['firstname'];
+                                                    $lastname=$_POST['lastname'];
+                                                    $name=$firstname.' '.$lastname;
+                                                    $email=$_POST['email'];
+                                                    $password=$_POST['password'];
+
+                                                    $goaltasker = new goaltracker;
+                                                    $goaltasker->signup($name, $email, $password);
+                                                      }                                        
+      
+                                                ?>
                                             <input type="email" class="form-control input-field" id="email" name="email" placeholder="Enter Email Address" required>
                                         </div>
                                         <div class="form-group mt-4 input-group" id="show_hide_password">
-                                            <input type="password" class="form-control input-field" id="pwd" name="pass" data-toggle="password"  placeholder="Enter Password" required>
+                                            <input type="password" class="form-control input-field" id="pwd" name="password" data-toggle="password"  placeholder="Enter Password" required>
                                             <div class="input-group-addon">
                                                 <span class="input-group-text eye-btn">
                                                     <i class="fa fa-eye"></i>
@@ -56,7 +74,7 @@
                                             <div class="row d-flex justify-content-between">
                                                 <div class="form-check">
                                                     <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox"> I agree to the Terms and Conditions
+                                                      <input class="form-check-input" type="checkbox" required="required"> I agree to the Terms and Conditions
                                                     </label>
                                                 </div>
                                             </div>
@@ -65,7 +83,7 @@
                                         <button type="submit" name="submit" class="mt-4 col-3 btn btn-primary btn-lg submit-button">Register</button>
                                     </form>
                                     <div class="opp-page mt-4">
-                                        <p>Already have an account? <a href="index.html">Login</a></p>
+                                        <p>Already have an account? <a href="index.php">Login</a></p>
                                     </div>
 
                                 </div>
