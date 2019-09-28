@@ -1,59 +1,33 @@
-[![Build Status](https://travis-ci.org/timolinn/hng.tech.svg?branch=master)]
-
-<div align="center">
-
-![hng](https://res.cloudinary.com/cryptonerd/image/upload/v1569583484/Screenshot_2019-09-27_at_12.23.53_PM_oebu4c.png)
-
-<br>
-
-</div>
-
-# Installation Guide
-
-- You need a server, download [Wamp](http://www.wampserver.com/en/) or [Xampp](https://www.apachefriends.org/index.html)
-- Clone this repository into `htdocs` of `www` folder in your respective servers. <br>
-- **If you have not been added to the organization, kindly work in your forked repository and open a pull request here** <br>
-- Fork the repository and push to your `staging branch`
-- Merge to your `master` and compare forks with the original repository
-- Open a Pull Request.
-- **Read [this](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) or watch [this](https://www.youtube.com/watch?v=G1I3HF4YWEw) for more help**
-
-```bash 
-git clone https://github.com/hngi/karmanor-goal-tracker.git
-```
-
-```bash
-cd karmanor-goal-tracker
-```
-
-```bash
-cp .env.example .env
-```
-
-```bash
-php -S localhost:8000
-```
-
-```bash
-Visit localhost:8000 in your browser
-```
-
-# Contribution Guide
-
-```bash
-git checkout -b(branch name)
-```
-
-- Add your contribution
-- Push to the new branch
-- Open a pull request on github
-- Wait for a review
-
-**Ensure you keep your fork in sync with the original repo otherwise your pull request might be closed or your changes reverted.**
-
-<br>
+# karmanor-goal-tracker
+link: http://karmanor-goal-tracker.000webhostapp.com/
 
 
+Team Karmanor Team's Goal Tracker App for the HNG6 Internship Program.
 
-# External host links: 
-http://karmanor-goal-tracker.000webhostapp.com/
+The project is a Goal-tracker system using HTML5, CSS3 and JavaScript on the frontend.The backend is done with PHP authenticating over a Mysql database Server.
+
+The folder structure of the project is as follows;
+
+brainiax-task-1/
+
+...css/
+...design/
+...js/
+...img/
+...fonts/
+...index.php
+...signup.php
+...dashboard.php
+...controller.php
+
+To test this project in a development environment, you'll need to run it on a web server with PHP5 installed, for ease of use we recommend XAMPP or WAMP which come shipped with Apache web server and other useful add-ons. Instructions on how to download and install and use them can be found on their websites;
+
+XAMPP - https://www.apachefriends.org/ WAMP - http://www.wampserver.com/en/
+
+After installing any of the above, you will need to copy this project's folder to the web root of your web server. Locate the installation directory of your chosen software and move "karmanor-goal-tracker" there.
+
+XAMPP - move the project to the "htdocs" directory. WAMP - move the project to the "www" folder.
+
+Launch XAMPP/WAMPP, make sure Apache is running then open your browser and navigate to "localhost/karmanor-goal-tracker".
+
+Voila! We hope so anyway.
