@@ -5,7 +5,7 @@
  */
 
 !function ($) {
-//eyeOpenClass: 'fa-eye',
+//eyeOpenClass: 'fa-eye', 
 //eyeCloseClass: 'fa-eye-slash',
     'use strict';
 
