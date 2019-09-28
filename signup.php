@@ -74,7 +74,7 @@
                                             <div class="row d-flex justify-content-between">
                                                 <div class="form-check">
                                                     <label class="form-check-label">
-                                                      <input class="form-check-input" type="checkbox"> I agree to the Terms and Conditions
+                                                      <input class="form-check-input" type="checkbox" required="required"> I agree to the Terms and Conditions
                                                     </label>
                                                 </div>
                                             </div>
