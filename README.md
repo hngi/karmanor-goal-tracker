@@ -1,32 +1,22 @@
 <div align="center">
 
-![hng](https://res.cloudinary.com/iambeejayayo/image/upload/v1554240066/brand-logo.png)
+![Karmanor](https://res.cloudinary.com/cryptonerd/image/upload/v1569592536/group_1_nuebm2.png)
 
 <br>
 
 </div>
 
-# karmanor-goal-tracker
-link: http://karmanor-goal-tracker.000webhostapp.com/
+# Team Karmanor HNG Internship 6.0
 
+## HNG6.0 Task 3: Karmanor Goal Tracker
 
-Team Karmanor Team's Goal Tracker App for the HNG6 Internship Program.
+### About Task
 
-The project is a Goal-tracker system using HTML5, CSS3 and JavaScript on the frontend.The backend is done with PHP authenticating over a Mysql database Server.
+- Hosted version can be found at [link](http://karmanor-goal-tracker.000webhostapp.com/   "karmanor goal tracker")
 
-The folder structure of the project is as follows;
+* Team Karmanor Team's Goal Tracker App for the HNG6 Internship Program.
 
-brainiax-task-1/
-
-...css/
-...design/
-...js/
-...img/
-...fonts/
-...index.php
-...signup.php
-...dashboard.php
-...controller.php
+* The project is a Goal-tracker system using HTML5, CSS3 and JavaScript on the frontend.The backend is done with PHP authenticating over a Mysql database Server.
 
 # Installation Guide
 
