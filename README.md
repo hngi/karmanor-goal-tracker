@@ -6,44 +6,36 @@
 
 </div>
 
-# Team Karmanor HNG Internship 6.0
+# karmanor-goal-tracker
+link: http://karmanor-goal-tracker.000webhostapp.com/
 
-## HNG6.0 Task 3: Karmanor Goal Tracker
 
-### About Task
+Team Karmanor Team's Goal Tracker App for the HNG6 Internship Program.
 
-- Hosted version can be found at [link](http://karmanor-goal-tracker.000webhostapp.com/   "karmanor goal tracker")
+The project is a Goal-tracker system using HTML5, CSS3 and JavaScript on the frontend.The backend is done with PHP authenticating over a Mysql database Server.
 
-* Team Karmanor Team's Goal Tracker App for the HNG6 Internship Program.
+The folder structure of the project is as follows;
 
-* The project is a Goal-tracker system using HTML5, CSS3 and JavaScript on the frontend.The backend is done with PHP authenticating over a Mysql database Server.
+brainiax-task-1/
 
-# Installation Guide
+...css/
+...design/
+...js/
+...img/
+...fonts/
+...index.php
+...signup.php
+...dashboard.php
+...controller.php
 
-- You need a server, download [Wamp](http://www.wampserver.com/en/) or [Xampp](https://www.apachefriends.org/index.html)
-- Clone this repository into `htdocs` of `www` folder in your respective servers. <br>
-- **If you have not been added to the organization, kindly work in your forked repository and open a pull request here** <br>
-- Fork the repository and push to your `test branch`
-- Merge to your `master` and compare forks with the original repository
-- Open a Pull Request.
-- **Read [this](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) or watch [this](https://www.youtube.com/watch?v=G1I3HF4YWEw) for more help**
+To test this project in a development environment, you'll need to run it on a web server with PHP5 installed, for ease of use we recommend XAMPP or WAMP which come shipped with Apache web server and other useful add-ons. Instructions on how to download and install and use them can be found on their websites;
 
-```bash
-git clone https://github.com/hngi/karmanor-goal-tracker.git
-```
+XAMPP - https://www.apachefriends.org/ WAMP - http://www.wampserver.com/en/
 
-```bash
-cd karmanor-goal-tracker
-```
+After installing any of the above, you will need to copy this project's folder to the web root of your web server. Locate the installation directory of your chosen software and move "karmanor-goal-tracker" there.
 
-```bash
-cp .env.example .env
-```
+XAMPP - move the project to the "htdocs" directory. WAMP - move the project to the "www" folder.
 
-```bash
-php -S localhost:8000
-```
+Launch XAMPP/WAMPP, make sure Apache is running then open your browser and navigate to "localhost/karmanor-goal-tracker".
 
-```bash
-Visit localhost:8000 in your browser
-```
+Voila! We hope so anyway.
