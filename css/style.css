@@ -418,4 +418,30 @@ html, body {
     }
 }
 
-
+.hide {
+    display: none;
+}
+.faq-item__btn {
+    background-color: blue;
+    color: white;
+}
+.faq-item__btn:hover {
+    cursor: pointer;
+}
+#faq-list {
+    list-style-type: none;
+}
+#faq-list li {
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+   
+}
+.faq-item__title  {
+    position: relative;
+    font-weight: bolder;
+    left: 20%;
+}
+.faq-item__body {
+    padding: 1em;
+}

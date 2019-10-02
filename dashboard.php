@@ -28,7 +28,7 @@
             <div class="row box-row title-header">
                 <div class="col-6">
                     <div class="left-title">
-                        <h2><a href="#">KARMA</a></h2>
+                        <h2><a href="dashboard.php">KARMA</a></h2>
                     </div>
                 </div>
                 <div class="col-6 logout">
@@ -45,6 +45,7 @@
                     <a href="dashboard.php?action=logout">
                         <i class="fa fa-sign-out"></i> Logout
                     </a>
+                    <span><a href="faq.php">FAQs</a></span>
                 </div>
             </div>
             
