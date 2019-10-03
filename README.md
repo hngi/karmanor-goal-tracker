@@ -1,3 +1,11 @@
+<div align="center">
+
+![Karmanor](https://res.cloudinary.com/cryptonerd/image/upload/v1569592536/group_1_nuebm2.png)
+
+<br>
+
+</div>
+
 # karmanor-goal-tracker
 link: http://karmanor-goal-tracker.000webhostapp.com/
 
