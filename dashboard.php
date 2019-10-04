@@ -24,7 +24,7 @@
     </head>
     
     <body>
-    <noscript>Please enable JavaScript for optimal experience</noscript>
+    <noscript>Please enable JavaScript for optimal experience!</noscript>
         <div class="container-fluid both-col-12">
             <div class="row box-row title-header">
                 <div class="col-6">
