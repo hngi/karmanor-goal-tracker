@@ -39,17 +39,36 @@
    if(isset($_POST['addtask'])){
    	   
 
-   	     $duedate=$_POST['duedate'];
-   	     $taskname=$_POST['taskname'];
-   	     $status=0;
-   	  $email=$_GET['email'];
-   	   $title=$_GET['title'];
-   	 
+      $duedate=$_POST['duedate'];
+      $taskname=$_POST['taskname'];
+      $status=0;
+      $email=$_GET['email'];
+      $title=$_GET['title'];
+      $today = date('Y-m-d');
 
-   	 	$goaltracker=new goaltracker;
-         $goaltracker->createTask($taskname, $email, $title, $duedate, $status);
+      $goaltracker=new goaltracker;
 
-         header("location: dashboard.php");
+      $newconnection = $goaltracker->connect_db();
+      $sql = "SELECT deadline FROM goals where email='$email'";
+      $result = $newconnection->query($sql);
+
+      if ($result->num_rows > 0){
+            while ($row = $result->fetch_assoc()) {
+                  $goalenddate = $row['deadline'];
+            }
+      }
+      else {
+            echo 'Please Kindly geddifok';
+            exit();
+      }
+
+      if ($duedate <= $goalenddate && $duedate >= $today) {
+            $goaltracker->createTask($taskname, $email, $title, $duedate, $status);
+            header("location: dashboard.php");
+      }
+      else{
+            header('location:dashboard.php?addtaskwrongdate');
+      }
    	
    }
 

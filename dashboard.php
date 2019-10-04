@@ -112,18 +112,28 @@
                     <?php
                         if(isset($_POST['addgoal'])){
                             if($_POST['title'] AND $_POST['deadline'] != NULL){
-                                  $title=$_POST['title'];                                  $deadline=$_POST['deadline'];
+                                  $title=$_POST['title'];
+                                  $deadline=$_POST['deadline'];
                                   $email=$_SESSION['email'];
+                                  $today = date('Y-m-d');
 
-
-                                  $goaltracker=new goaltracker;
-                                  $goaltracker->createGoal($email, $title, $deadline);                                                
+                                  if ($deadline >= $today) {
+                                    $goaltracker=new goaltracker;
+                                    $goaltracker->createGoal($email, $title, $deadline);
+                                  }
+                                  else {
+                                    echo '<p style="padding-left: 100px;"><font color="red">Please Input correct date, Either today or after today</font></p>';
+                                  }                                            
                               }
                             else{
-                                echo '<p style="padding-left: 100px;"><font color="red">Please Fill Required (*) Fields to Create Goal</font>';
+                                echo '<p style="padding-left: 100px;"><font color="red">Please Fill Required (*) Fields to Create Goal</font></p>';
                                                 
                                 }
                                          }
+                            
+                            if (isset($_GET['addtaskwrongdate'])){
+                                echo '<p style="padding-left: 100px;"><font color="red">Please select the correct date when adding tasks to your goal.</font></p>';
+                            }
 
                         ?>
                     
