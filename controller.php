@@ -352,7 +352,7 @@ class goaltracker
                                         </a>
                                     </div>
                                     <div class="col-2 task-end-date ml-auto">
-                                        <strong>20/09/2019</strong>
+                                        <strong>'.$duedate.'</strong>
                                     </div>
                                 </div>
                             </div>
