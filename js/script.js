@@ -29,3 +29,22 @@
     });
 
 }(window.jQuery);
+
+function fetch(id, goal = 0) {
+    gt = 'goal';
+    if (!goal) {
+        gt = 'task'
+    }
+console.log(gt);
+    data_url = 'edit.php?fetch='+gt+'&id='+id;
+    $.get(data_url, function(data){ //jQuery Ajax post
+        if(data) { //if no more records
+            data = JSON.parse(data);
+            $('#gtid').val(data.id);
+            $('#title').val(data.title);
+            $('#due_date').val(data.deadline);
+            $('#gt').val(gt);
+            $('#heading').html('Edit '+gt);
+        }		
+    });
+}

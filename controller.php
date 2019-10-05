@@ -122,12 +122,12 @@ class goaltracker
         }
     }
 
-    function createTask($taskname, $email, $goaltitle, $duedate, $status)
+    function createTask($taskname, $email, $goal_id, $duedate, $status)
     {
 
         $newconnection = $this->connect_db();
 
-        $sql = "INSERT INTO tasks (taskname, email, goaltitle, duedate, status) VALUES('$taskname','$email', '$goaltitle', '$duedate', '$status')";
+        $sql = "INSERT INTO tasks (taskname, email, goalid, duedate, status) VALUES('$taskname','$email', '$goal_id', '$duedate', '$status')";
 
         if ($newconnection->query($sql) === TRUE) {
             echo '<p style="padding-left: 100px;"><font color="green"> Task Created Successfully. View Below</font></p>';
@@ -136,11 +136,11 @@ class goaltracker
         }
     }
 
-    function calculategoalProgress($goalname)
+    function calculategoalProgress($goal_id)
     {
 
         $newconnection = $this->connect_db();
-        $sql = "SELECT * FROM tasks where goaltitle='$goalname'";
+        $sql = "SELECT * FROM tasks where goalid='$goal_id'";
         $result = $newconnection->query($sql);
         $totaltask = $result->num_rows;
         $taskcompleted = 0;
@@ -175,14 +175,14 @@ class goaltracker
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
 
-
+                $id = $row['id'];
                 $title = $row['title'];
                 $deadline = $row['deadline'];
                 $email = $row['email'];
                 $progress = $row['progress'];
                 $idtitle = str_replace(' ', '', $title);
                 $rowtitle = $row['title'];
-                $progress = $this->calculategoalProgress($title);
+                $progress = $this->calculategoalProgress($id);
                 if ($progress == 100) {
                     $progresscolor = "good";
                 } else if ($progress < 100 && $progress >= 40) {
@@ -212,13 +212,19 @@ class goaltracker
                                         <strong>' . $progress . '%</strong>
 
                                     </div>
+
+                                    <div class="col-1 edit-goal">
+                                        <a href="#" data-toggle="modal" data-target="#edit-goal" onclick="fetch('.$id.',1)">
+                                            <strong><i class="fa fa-pencil"></i>Edit</strong>
+                                        </a>   
+                                    </div>
                                     <div class="col-2 add-task">
-                                        <a href="#" data-toggle="modal" data-target="#add-task-modal">
+                                        <a href="#" data-toggle="modal" data-target="#add-task-'.$idtitle.'">
                                             <strong><i class="fa fa-plus"></i> Add tasks</strong>
                                         </a>
 
-                                       
-                                        <div class="modal fade" id="add-task-modal" tabindex="-1" role="dialog">
+                                    
+                                        <div class="modal fade" id="add-task-'.$idtitle.'" tabindex="-1" role="dialog">
 
                                             <div class="modal-dialog">
 
@@ -231,7 +237,7 @@ class goaltracker
                                                       
                                                     <div class="modal-body">
 
-                                                        <form action="modalactions.php?email=' . $email . '&title=' . $title . '" method="POST">
+                                                        <form action="modalactions.php?email=' . $email . '&goal_id=' . $id . '" method="POST">
                                                             <div class="form-group">
                                                                 <label for="add-task-name">Task Name</label>
                                                                 <input name="taskname" type="text" class="form-control" id="add-task-name" placeholder="Enter Here" required="required">
@@ -260,11 +266,11 @@ class goaltracker
                                     </div>
                                     <div class="col-2 delete-goal">
                                         
-                                        <a href="#" data-toggle="modal" data-target="#delete-modal">
+                                        <a href="#" data-toggle="modal" data-target="#delete-modal-'.$id.'">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
                                         </a>
                                         
-                                        <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog">
+                                        <div class="modal fade" id="delete-modal-'.$id.'" tabindex="-1" role="dialog">
 
                                             <div class="modal-dialog">
 
@@ -280,7 +286,7 @@ class goaltracker
                                                             Are you sure you want to delete this Goal? <span>(This action is irreversible)</span>
                                                         </h3>
                                                         
-                                                        <a href="modalactions.php?email=' . $email . '&title=' . $title . '&deletegoal=yes"><button type="button" class="mt-4 btn btn-light btn-lg delete-a-goal-button">Delete</button></a>
+                                                        <a href="modalactions.php?email=' . $email . '&id=' . $id . '&deletegoal=yes"><button type="button" class="mt-4 btn btn-light btn-lg delete-a-goal-button">Delete</button></a>
 
                                                     </div>
                                                 </div>
@@ -296,7 +302,7 @@ class goaltracker
                         </div>';
 
 
-                $this->fetchtasks($email, $title, $idtitle);
+                $this->fetchtasks($email, $id, $idtitle);
 
 
 
@@ -305,15 +311,17 @@ class goaltracker
             }
         }
     }
-    function fetchtasks($email, $goaltitle, $idtitle)
+    function fetchtasks($email, $goalid, $idtitle)
     {
         $newconnection = $this->connect_db();
-        $sql = "SELECT * FROM tasks where email='$email' and goaltitle='$goaltitle'";
+        $sql = "SELECT * FROM tasks where email='$email' and goalid='$goalid'";
         $result = $newconnection->query($sql);
 
 
         if ($result->num_rows > 0) {
+            $i = 0;
             while ($row = $result->fetch_assoc()) {
+                $id = $row['id'];
                 $taskname = $row['taskname'];
                 $email = $row['email'];
                 @$completed;
@@ -335,19 +343,24 @@ class goaltracker
                                 <div class="row task-row">
                                     <div class="col-6 task-name">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="task3CustomCheck4" ' . $completed . '>
-                                            <label class="custom-control-label" for="task3CustomCheck4">
+                                            <input type="checkbox" class="custom-control-input" id="task3CustomCheck4'.$i.'" ' . $completed . '>
+                                            <label class="custom-control-label" for="task3CustomCheck4'.$i.'">
                                                 <strong>' . $taskname . '</strong>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-2 confirm-task">
-                                        <a href="modalactions.php?email=' . $email . '&goaltitle=' . $goaltitle . '&taskname=' . $taskname . '&completetask=yes">
+                                        <a href="modalactions.php?email=' . $email . '&id=' . $id . '&goalid=' . $goalid .  '&completetask=yes">
                                             <strong><i class="fa fa-check fa-check-confirmed"></i> Complete </strong>
                                         </a>
                                     </div>
+                                    <div class="col-1 edit-goal">
+                                        <a href="#" data-toggle="modal" data-target="#edit-goal" onclick="fetch('.$id.',0)">
+                                            <strong><i class="fa fa-pencil"></i>Edit</strong>
+                                        </a>   
+                                    </div>
                                     <div class="col-2 delete-task">
-                                         <a href="modalactions.php?email=' . $email . '&goaltitle=' . $goaltitle . '&taskname=' . $taskname . '&deletetask=yes">
+                                         <a href="modalactions.php?email=' . $email . '&id=' . $id . '&goalid=' . $goalid . '&deletetask=yes">
                                             <strong><i class="fa fa-trash"></i> Delete </strong>
                                         </a>
                                     </div>
@@ -357,15 +370,16 @@ class goaltracker
                                 </div>
                             </div>
                         </div>';
+                        $i++;
             }
         }
     }
 
 
-    function deletegoal($email, $title)
+    function deletegoal($email, $id)
     {
         $newconnection = $this->connect_db();
-        $sql = "DELETE FROM goals where email='$email' and title='$title'";
+        $sql = "DELETE FROM goals where email='$email' and id='$id'";
         $result = $newconnection->query($sql);
 
 
@@ -375,10 +389,10 @@ class goaltracker
             echo "Error deleting record: " . $conn->error;
         }
     }
-    function deletetask($email, $title, $taskname)
+    function deletetask($email, $goal_id, $task_id)
     {
         $newconnection = $this->connect_db();
-        $sql = "DELETE FROM tasks where email='$email' and taskname='$taskname' and goaltitle='$title'";
+        $sql = "DELETE FROM tasks where email='$email' and id='$task_id' and goalid='$goal_id'";
         $result = $newconnection->query($sql);
 
 
@@ -389,10 +403,10 @@ class goaltracker
         }
     }
 
-    function completetask($email, $title, $taskname)
+    function completetask($email, $goal_id, $task_id)
     {
         $newconnection = $this->connect_db();
-        $sql = "UPDATE tasks SET status='completed' where email='$email' and taskname='$taskname' and goaltitle='$title'";
+        $sql = "UPDATE tasks SET status='completed' where email='$email' and id='$task_id' and goalid='$goal_id'";
         $result = $newconnection->query($sql);
 
 
@@ -401,5 +415,69 @@ class goaltracker
         } else {
             echo "Error updating record: " . $conn->error;
         }
+    }
+
+    function editGoal($id, $title, $due_date) {
+        $query_stmt = "UPDATE goals SET title = '$title', deadline = '$due_date' WHERE id = '$id'";
+        
+        if ($this->runQuery($query_stmt)) {
+            echo '<p style="padding-left: 100px;"><font color="green"> Goal Updated</font></p>';
+        } else {
+            echo "An error occurred updating the goal";
+        }
+    }
+    
+    function editTask($id, $task, $due_date) {
+        $query_stmt = "UPDATE tasks SET taskname = '$task', duedate = '$due_date' WHERE id = '$id'";
+
+        if ($this->runQuery($query_stmt)) {
+            echo '<p style="padding-left: 100px;"><font color="green"> Task Updated</font></p>';
+        } else {
+            echo "An error occurred updating the goal";
+        }
+    }
+
+    function getGoal($id) {        
+        $query_stmt = "SELECT * FROM goals WHERE id = $id";
+
+        $conn_obj = $this->connect_db();
+        $goal = $conn_obj->query($query_stmt);
+        if ($goal->num_rows > 0) {
+            while ($r = $goal->fetch_assoc()) {
+                $id = $r['id'];
+                $title = $r['title'];
+                $deadline = $r['deadline'];
+            }
+            return json_encode(array('id' => $id, 'title' => $title, 'deadline' => $deadline), JSON_FORCE_OBJECT);
+        } else {
+            return "Goal not found";
+        }
+    }
+
+    function getTask($id) {        
+        $query_stmt = "SELECT * FROM tasks WHERE id = $id";
+
+        $conn_obj = $this->connect_db();
+        $goal = $conn_obj->query($query_stmt);
+        if ($goal->num_rows > 0) {
+            while ($r = $goal->fetch_assoc()) {
+                $id = $r['id'];
+                $title = $r['taskname'];
+                $deadline = $r['duedate'];
+            }
+            return json_encode(array('id' => $id, 'title' => $title, 'deadline' => $deadline), JSON_FORCE_OBJECT);
+        } else {
+            return "Goal not found";
+        }
+    }
+
+    function runQuery($query_stmt) {
+        $conn_obj = $this->connect_db();
+        if ($conn_obj->query($query_stmt)) {
+            $conn_obj->close();
+            return true;
+        }
+        $conn_obj->close();
+        return false;
     }
 }

@@ -32,7 +32,7 @@
                         <div class="parent">
                             <div class="row insideParent d-flex justify-content-center">
                                 <div class="col-md-10 left-form">
-                                    <h4>Welcome Back, Please Register
+                                    <h4>Welcome, Please Register
                                         <br> Your Account
                                     </h4>
 
@@ -111,7 +111,6 @@
                 </div>
             </div>
         </div>
-        
         
         
         <!-- jQuery -->
