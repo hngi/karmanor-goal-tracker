@@ -1,0 +1,284 @@
+body{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #FFFFFF;
+}
+.logo{
+    position: absolute;
+    width: 152px;
+    height: 96px;
+    left: 40px;
+    top: -8px;
+}
+.image{
+    position: absolute;
+    width: 1440px;
+    height: 149px;
+    left: 0px;
+    top: 71px;
+}
+.contact-us h1{
+    position: absolute; 
+    width: 230px;
+    height: 38px;
+    left: 115px;
+    top: 210px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+    border: 2px;
+}
+.intro{
+    position: absolute;
+    width: 724px;
+    height: 12px;
+    left: 136px;
+    top: 250px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+}
+#name{
+    position: absolute;
+    width: 695px;
+    height: 51px;
+    left: 136px;
+    top: 395px;
+    background: #FFFFFF;
+    border: 1px solid #6A6A6A;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-size: 18px;
+}
+#name:hover:focus{
+    border: 2px;
+    border-color: rgb(0, 154, 243);
+}
+.your-name{
+    position: absolute;
+    width: 150px;
+    height: 18px;
+    left: 123px;
+    top: 363px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+#email{
+    position: absolute;
+    width: 695px;
+    height: 51px;
+    left: 136px;
+    top: 511px;
+    background: #FFFFFF;
+    border: 1px solid #6A6A6A;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-size: 18px;
+}
+#email:hover:focus{
+    border: 2px;
+    border-color: rgb(0, 154, 243);
+}
+.your-email{
+    position: absolute;
+    width: 155px;
+    height: 22px;
+    left: 116px;
+    top: 476px;
+    font-family: century gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center; 
+    color: #000000;
+}
+#subject{
+    position: absolute;
+    width: 695px;
+    height: 51px;
+    left: 136px;
+    top: 627px;
+    background: #FFFFFF;
+    border: 1px solid #6A6A6A;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-size: 18px;
+}
+#subject:hover:focus{
+    border: 2px;
+    border-color: rgb(0, 154, 243);
+}
+.your-subject{
+    position: absolute;
+    width: 150px;
+    height: 21px;
+    left: 136px;
+    top: 592px;
+    font-family: century gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+#message{
+    position: absolute;
+    width: 695px;
+    height: 159px;
+    left: 136px;
+    top: 743px;
+    background: #FFFFFF;
+    border: 1px solid #6A6A6A;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    font-size: 18px;
+}
+#message:hover:focus{
+    border: 2px;
+    border-color: rgb(0, 154, 243);
+}
+.your-message{
+    position: absolute;
+    width: 170px;
+    height: 25px;
+    left: 130px;
+    top: 702px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+}
+button{
+    position: absolute;
+    width: 78px;
+    height: 26px;
+    left: 154px;
+    top: 942px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+#submit{
+    position: absolute;
+    width: 115px;
+    height: 45px;
+    left: 136px;
+    top: 932px;
+    background: rgb(1, 95, 180);
+}
+#submit:hover{
+    background-color: rgb(92, 122, 255);
+}
+.my-email{
+    position: absolute;
+    width: 277px;
+    height: 20px;
+    left: 965px;
+    top: 283px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+.my-phone{
+    position: absolute;
+    width: 189px;
+    height: 20px;
+    left: 957px;
+    top: 411px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+#my-email{
+    position: absolute;
+    width: 86px;
+    height: 21px;
+    left: 960px;
+    top: 248px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #FE4242;
+}
+#my-phone{
+    position: absolute;
+    width: 96px;
+    height: 22px;
+    left: 959px;
+    top: 375px;
+    font-family: century Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #FE4242;
+}
+.line-1{
+    position: absolute;
+    width: 298px;
+    height: 0px;
+    left: 968px;
+    top: 338px;
+    mix-blend-mode: darken;
+    border: 1px solid #878484;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.line-2{
+    position: absolute;
+    width: 295px;
+    height: 0px;
+    left: 968px;
+    top: 470px;
+    mix-blend-mode: darken;
+    border: 1px solid #878484;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.error{
+    color:red;
+}
+.success{
+    color:#e60d05;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
