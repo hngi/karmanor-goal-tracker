@@ -182,7 +182,7 @@ class goaltracker
                 $progress = $row['progress'];
                 $idtitle = str_replace(' ', '', $title);
                 $rowtitle = $row['title'];
-                $progress = $this->calculategoalProgress($title);
+                $progress = $this->calculategoalProgress($id);
                 if ($progress == 100) {
                     $progresscolor = "good";
                 } else if ($progress < 100 && $progress >= 40) {
