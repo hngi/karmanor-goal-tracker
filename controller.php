@@ -5,9 +5,9 @@ ob_start();
 class goaltracker
 {
     private $db_server = "localhost";
-    private $db_name = "karmanor-goal-tracker";
-    private $db_user = "root";
-    private $db_pass = "";
+          private $db_name = "karmanor-goal-tracker";
+          private $db_user = "root";
+          private $db_pass = ""; 
 
 
 
@@ -173,6 +173,8 @@ class goaltracker
 
 
         if ($result->num_rows > 0) {
+            $newdeadline = array();
+            $b = 0;
             while ($row = $result->fetch_assoc()) {
 
                 $id = $row['id'];
@@ -191,7 +193,7 @@ class goaltracker
                     $progresscolor = "poor";
                 }
 
-
+                $newdeadline[$b]=str_replace("-", ", " , $deadline);
 
                 echo '
                   
@@ -294,9 +296,42 @@ class goaltracker
                                         </div>
                                         
                                     </div>
-                                    <div class="col-2 goal-end-date ml-auto">
-                                        <strong>' . $deadline . '</strong>
+                                    
+                                    <div id="'.$idtitle.'" class="goal-end-date ml-auto">
+                                     
                                     </div>
+
+
+                                     <script>
+                                        
+                                        var countDownDate = new Date("'.$newdeadline[$b].' 00:00:00").getTime();
+
+
+                                        var x = setInterval(function() {
+
+
+                                          var now = new Date().getTime();
+
+                                         
+                                          var distance = countDownDate - now;
+
+                                         
+                                          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+                                          document.getElementById("'.$idtitle.'").innerHTML = days + "d " + hours + "h "
+                                          + minutes + "m " + seconds + "s ";
+
+
+                                           if (distance < 0) {
+                                            clearInterval(x);
+                                            document.getElementById("'.$idtitle.'").innerHTML = "EXPIRED";
+                                          }
+                                        }, 1000);
+                                        </script>
                                 </div>
                             </div>
                         </div>';
@@ -308,6 +343,7 @@ class goaltracker
 
 
                 echo '</div>';
+                $b++;
             }
         }
     }
