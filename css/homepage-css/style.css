@@ -1,0 +1,349 @@
+/* General Section */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+    color: #64707b;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: #41464b;
+}
+
+/*==================================================================
+                        HOME
+===================================================================*/
+
+#home {
+    height: 100%;
+}
+
+.left-side {
+    height: 100%;
+    background: #69CAD3;
+    padding: 0;
+    display: table;
+}
+
+.left-side img {
+    width: 100%;
+    margin: 7% 0 7% 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.home-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.home-heading h4 {
+    font-size: 55px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+    color: #41464b;
+}
+
+/*==============================================================================
+
+                        PARALLAX (Generic)
+
+==============================================================================*/
+
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*==============================================================================
+
+                        BUTTONS
+
+==============================================================================*/
+
+.btn-general {
+    border-width: 2px;
+    border-radius: 0;
+    padding: 12px 26px 12px 26px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.btn-white {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-blue {
+    border-color: #34c6d3;
+    color: #34c6d3;
+    margin-right: 30px;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+    background-color: #34c6d3;
+    color: #fff;
+}
+
+.home-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*===================================================================
+                        ANIMATE
+===================================================================*/
+
+#home-cover, #home-heading, #home-btn {
+    animation-duration: .5s;
+}
+
+#home-cover {
+    animation-delay: .1s;
+}
+
+#home-heading {
+    animation-delay: .5s;
+}
+
+#home-btn {
+    animation-delay: 1s;
+}
+
+/*====================================================================
+                        CONTENT (Generic)
+===================================================================*/
+
+.content-box {
+    padding: 60px 0 60px 0;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.content-title-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #34c6d3;
+    margin: 0 auto 30px auto;
+}
+
+/*====================================================================
+                        SERVICES
+===================================================================*/
+
+.service-item {
+    padding: 20px 0 20px 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.service-item-icon {
+    color: #34c6d3;
+    float: left;
+    padding: 15px;
+    margin-right: 25px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+}
+
+.service-item:hover .service-item-icon {
+    color: #fff;
+    background-color: #34c6d3;
+}
+
+.service-item-title h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.service-item-desc p {
+    margin: 0;
+    padding-left: 85px;
+}
+
+/*====================================================================
+                        TEAM
+===================================================================*/
+
+.team-member {
+    margin: 0 15px;
+}
+
+.team-member-info {
+    padding: 10px 0 30px 0;
+}
+
+h4.team-member-name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: 20px;
+}
+
+h4.team-member-role {
+    color: #34c6d3;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/*====================================================================
+                        STATS
+===================================================================*/
+
+#stats-cover {
+    background-image: url(https://res.cloudinary.com/anikriz/image/upload/v1570297155/HNG%20%7CStartng%20Internship/bg-stats_ycgnzx.jpg);
+}
+
+#stats .content-box {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.content-title-white h3 {
+    color: #fff;
+}
+
+.stats-item {
+    padding: 100px 0;
+}
+
+.stats-item i {
+    color: #34c6d3;
+}
+
+.stats-item h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+.stats-item p {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/*====================================================================
+                        FOOTER
+===================================================================*/
+
+footer {
+    background-color: #41464b;
+}
+
+#footer-bottom {
+    padding: 30px 0;
+}
+
+#footer-copyrights p {
+    margin: 0;
+    color: #fff;
+}
+
+#footer-menu {
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#footer-menu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#footer-menu ul li {
+    display: inline-block;
+}
+
+#footer-menu a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#footer-menu a:hover {
+    color: #34c6d3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

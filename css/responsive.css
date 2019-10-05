@@ -1,0 +1,54 @@
+/*========================================================
+                BOOTSTRAP 3 MEDIA QUERIES: ;
+========================================================*/
+
+/* Large Devices (Desktop & Laptops) */
+
+@media(min-width: 1200px) {
+    /* Good to go */
+}
+
+/* Medium Devices (Landscape Tablets & Medium Desktop) */
+
+@media(min-width: 992px) and (max-width: 1199px) {
+    #services {
+        margin-top: -200px;
+    }
+}
+
+/* Small Devices (Portrait Tablets & Small Desktops) */
+
+@media(min-width: 768px) and (max-width: 991px) {
+    #services {
+        margin-top: -250px;
+    }
+}
+
+/* Extra Small Devices (Phones, Landscape Phones & Portrait Tablets) */
+
+@media (max-width: 767px) {
+    #home {
+        margin-bottom: 200px;
+    }
+
+    .stats-item {
+        padding: 20px 0;
+    }
+    
+    #home-heading h3 {
+        font-size: 24px;
+    }
+    
+    .btn-general {
+        padding: 6px 22px;
+        font-size: 14px;
+    }
+    
+    #services {
+        margin-top: -50px;
+    }
+    
+    #footer-bottom {
+        text-align: center;
+    }
+}
